@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Canela & miel</title>
+</head>
+<body>
+  <header>
+    <div class="header__menu header__menu--izquierdo" >
+      <a href="#inicio" class="menu__item">Inicio</a>
+      <a href="#productos" class="menu__item">Productos</a>
+      <a href="#nosotros" class="menu__item">Nosotros</a>
+    </div>
+    <img src="imagenes/1.png" alt="logo" class="header__logo">
+    <div class="header__menu">
+      <a href="#contacto" class="menu__item menu__item--derecho">Contacto</a>
+      <button class="btn">Compra Ahora</button>
+    </div>
+  </header>
+  <main>
+    <section class="destacado" id="inicio">
+      <div class="destacado__banner">
+        <img src="imagenes/banner.png" alt="fondo" class="destacado__bannerfondo">
+      </div>
+      <div class="destacado__info">
+        <h2 class="destacado__texto">Un aroma, un recuerdo, una sonrisa</h2>
+        <p class="destacado__subtexto">Deja que nuestros sabores únicos te transporten.</p>
+        <button class="btn">
+          <a href="#productosbtn" class="btn--link">Explorar Productos</a>
+        </button>
+      </div>
+    </section>
+    <h2 class="titulo_section" id="productos">Productos</h2>
+    <section class="productos"  id="productosbtn">
+      <div class="producto__item">
+        <img src="imagenes/blueberry.jpg" alt="imagen1" class="producto__imagen">
+        <p class="producto__nombre">Postre blueberry</p>
+        <p class="producto__precio">$20000</p>
+      </div>
+      <div class="producto__item">
+        <img src="imagenes/bolitascream.jpg" alt="imagen2" class="producto__imagen">
+        <p class="producto__nombre">Postre Bolitas de crema</p>
+        <p class="producto__precio">$20000</p>
+      </div>
+      <div class="producto__item">
+        <img src="imagenes/cereza.jpeg" alt="imagen3" class="producto__imagen">
+        <p class="producto__nombre">Postre de cereza</p>
+        <p class="producto__precio">$20000</p>
+      </div>
+      <div class="producto__item">
+        <img src="imagenes/fresa.jpg" alt="imagen4" class="producto__imagen">
+        <p class="producto__nombre">Postre de fresa</p>
+        <p class="producto__precio">$20000</p>
+      </div>
+      <div class="producto__item">
+        <img src="imagenes/fresachocolate.jpg" alt="imagen5" class="producto__imagen">
+        <p class="producto__nombre">Postre de fresa con chocolate</p>
+        <p class="producto__precio">$20000</p>
+      </div>
+      <div class="producto__item">
+        <img src="imagenes/maracuya.jpg" alt="imagen6" class="producto__imagen">
+        <p class="producto__nombre">Postre de maracuyá</p>
+        <p class="producto__precio">$20000</p>
+      </div>
+      <div class="producto__item">
+        <img src="imagenes/azul.jpg" alt="imagen6" class="producto__imagen">
+        <p class="producto__nombre">Postre de arándano</p>
+        <p class="producto__precio">$20000</p>
+      </div>
+      <div class="producto__item">
+        <img src="imagenes/ositos.jpg" alt="imagen6" class="producto__imagen">
+        <p class="producto__nombre">Postre de ositos de galleta</p>
+        <p class="producto__precio">$20000</p>
+      </div>
+    </section>
+    <h2 class="titulo_section" id="nosotros">Nosotros</h2>
+    <section class="nosotros">
+    <div class="nosotros__imagen">
+      <img src="imagenes/nosotros.jpg" alt="Elaboración artesanal">
+    </div>
+    <div class="nosotros__contenido">
+      <h2 class="nosotros__titulo">Pasión por lo artesanal</h2>
+      <p class="nosotros__descripcion">
+        En Canela & Miel, nos apasiona crear postres que no solo deleitan el paladar, sino que también evocan emociones y recuerdos inolvidables. Cada uno de nuestros productos está elaborado con ingredientes de la más alta calidad y una dosis extra de amor y dedicación. Creemos que un buen postre tiene el poder de transformar cualquier momento en una ocasión especial, y es por eso que nos esforzamos por ofrecerte sabores únicos y experiencias memorables en cada bocado. ¡Ven y descubre el dulce mundo de Canela & Miel!
+      </p>
+      <p class="nosotros__descripcion">
+        Nuestro compromiso es crear experiencias dulces que perduren en tu memoria.
+      </p>
+      <div class="nosotros__valores">
+        <div class="valor">
+          <h3>🌿 100% Natural</h3>
+          <p>Sin conservantes</p>
+        </div>
+        <div class="valor">
+          <h3>👨‍🍳 Artesanal</h3>
+          <p>Hecho a mano</p>
+        </div>
+        <div class="valor">
+          <h3>❤️ Con amor</h3>
+          <p>Recetas únicas</p>
+        </div>
+      </div>
+    </div>
+    </section>
+    <h2 class="titulo_section" id="contacto">Contacto</h2>
+    <form class="contacto">
+      <label for="nombre" class="contacto__label">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" class="contacto__input">
+
+      <label for="email" class="contacto__label">Correo Electrónico:</label>
+      <input type="email" id="email" name="email" class="contacto__input">
+
+      <label for="mensaje" class="contacto__label">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" class="contacto__textarea"></textarea>
+
+      <button type="submit" class="btn contacto__btn">Enviar</button>
+    </form>
+  </main>
+  <footer>
+    <img src="" alt="logo footer" class="footer__logo">
+    <p class="footer__texto">© 2024 Canela & Miel. Todos los derechos reservados.</p>
+    <div class="footer__links">
+      <a href="#" class="footer__link">Política de Privacidad</a>
+      <a href="#" class="footer__link">Términos de Servicio</a>
+      <a href="#" class="footer__link">Sedes asociadas</a>
+    </div>
+    <div class="footer__redes">
+      <a href="#" class="footer__red social-facebook">Facebook</a>
+      <a href="#" class="footer__red social-instagram">Instagram</a>
+      <a href="#" class="footer__red social-twitter">Twitter</a>
+    </div>
+  </footer>
+</body>
+</html>

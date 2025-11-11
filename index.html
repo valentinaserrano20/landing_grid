@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/7fb5ff4237.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
   <title>Canela & miel</title>
 </head>
@@ -85,51 +86,58 @@
       <p class="nosotros__descripcion">
         En Canela & Miel, nos apasiona crear postres que no solo deleitan el paladar, sino que también evocan emociones y recuerdos inolvidables. Cada uno de nuestros productos está elaborado con ingredientes de la más alta calidad y una dosis extra de amor y dedicación. Creemos que un buen postre tiene el poder de transformar cualquier momento en una ocasión especial, y es por eso que nos esforzamos por ofrecerte sabores únicos y experiencias memorables en cada bocado. ¡Ven y descubre el dulce mundo de Canela & Miel!
       </p>
-      <p class="nosotros__descripcion">
+      <p class="nosotros__descripcion nosotros__descripcion--centrado">
         Nuestro compromiso es crear experiencias dulces que perduren en tu memoria.
       </p>
-      <div class="nosotros__valores">
-        <div class="valor">
-          <h3>🌿 100% Natural</h3>
-          <p>Sin conservantes</p>
-        </div>
-        <div class="valor">
-          <h3>👨‍🍳 Artesanal</h3>
-          <p>Hecho a mano</p>
-        </div>
-        <div class="valor">
-          <h3>❤️ Con amor</h3>
-          <p>Recetas únicas</p>
-        </div>
       </div>
     </div>
     </section>
     <h2 class="titulo_section" id="contacto">Contacto</h2>
     <form class="contacto">
-      <label for="nombre" class="contacto__label">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" class="contacto__input">
+      <div class="contacto__seccion">
+        <label for="nombre" class="contacto__label">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" class="contacto__texto" placeholder="Ej: María González">
 
-      <label for="email" class="contacto__label">Correo Electrónico:</label>
-      <input type="email" id="email" name="email" class="contacto__input">
+        <label for="email" class="contacto__label">Correo electrónico:</label>
+        <input type="email" id="email" name="email" class="contacto__texto" placeholder="ejemplo@correo.com">
 
-      <label for="mensaje" class="contacto__label">Mensaje:</label>
-      <textarea id="mensaje" name="mensaje" class="contacto__textarea"></textarea>
+        <label for="telefono" class="contacto__label">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" class="contacto__texto" placeholder="300 123 4567">
+      </div>
+      <div class="contacto__seccion">
+        <label for="tipo-pedido" class="contacto__label">Tipo de pedido:</label>
+        <select id="tipo-pedido" name="tipo-pedido" class="contacto__texto contacto__texto--select">
+          <option value="">Selecciona una opción</option>
+          <option value="evento">Evento especial</option>
+          <option value="cumpleaños">Cumpleaños</option>
+          <option value="bodas">Boda</option>
+          <option value="corporativo">Evento corporativo</option>
+          <option value="individual">Pedido individual</option>
+        </select>
 
-      <button type="submit" class="btn contacto__btn">Enviar</button>
-    </form>
+        <label for="mensaje" class="contacto__label">Detalles del pedido:</label>
+        <textarea id="mensaje" name="mensaje" class="contacto__texto contacto__texto--mensaje" placeholder="Cuéntanos qué postres te interesan, cantidad de personas, fecha del evento..."></textarea>
+      </div>
+      <button type="submit" class="btn contacto__btn">Solicitar Cotización</button>
+  </form>
   </main>
   <footer>
-    <img src="" alt="logo footer" class="footer__logo">
-    <p class="footer__texto">© 2024 Canela & Miel. Todos los derechos reservados.</p>
+    <img src="imagenes/1.png" alt="logo footer" class="footer__logo">
     <div class="footer__links">
       <a href="#" class="footer__link">Política de Privacidad</a>
       <a href="#" class="footer__link">Términos de Servicio</a>
       <a href="#" class="footer__link">Sedes asociadas</a>
     </div>
     <div class="footer__redes">
-      <a href="#" class="footer__red social-facebook">Facebook</a>
-      <a href="#" class="footer__red social-instagram">Instagram</a>
-      <a href="#" class="footer__red social-twitter">Twitter</a>
+      <a href="#" class="footer__red">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" class="footer__red">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="#" class="footer__red">
+        <i class="fab fa-twitter"></i>
+      </a>
     </div>
   </footer>
 </body>

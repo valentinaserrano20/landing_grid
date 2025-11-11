@@ -13,6 +13,9 @@
   --color-boton: #AD6A71;
   --color-fondo: #FDF2E1;
   --peso-fuente-principal: 600;
+  --tamaño-fuente-principal: 18px;
+  --tamaño-fuente-titulos: 24px;
+  --tamaño-fuente-botones: 20px;
 }
 
 body{
@@ -44,7 +47,7 @@ header{
 .menu__item{
   font-family: var(--fuente-titulos);
   text-decoration: none;
-  font-size: 24px;
+  font-size: var(--tamaño-fuente-titulos);
   color: var(--color-texto);
 }
 
@@ -60,7 +63,7 @@ header{
 .btn{
   padding: 10px 20px;
   font-family: var(--fuente-titulos);
-  font-size: 20px;
+  font-size: var(--tamaño-fuente-botones);
   background-color: var(--color-boton);
   border: none;
   border-radius: 10px;
@@ -78,10 +81,9 @@ header{
 }
 
 .destacado__banner {
-  /* Ambos elementos en la misma posición */
   grid-column: 1;
   grid-row: 1;
-  z-index: 1; /* Imagen atrás */
+  z-index: 1;
 }
 
 .destacado__bannerfondo{
@@ -95,7 +97,6 @@ header{
   z-index: 2;
   display: flex;
   flex-direction: column;
-  justify-items: center;
   align-items: center;
   gap: 20px;
 }
@@ -110,14 +111,14 @@ header{
 .destacado__subtexto {
   color: var(--color-texto);
   font-family: var(--fuente-principal);
-  font-size: 18px;
+  font-size: var(--tamaño-fuente-principal);
   text-align: center;
   font-weight: var(--peso-fuente-principal);
 }
 
 .titulo_section{
   font-family: var(--fuente-titulos);
-  font-size: 28px;
+  font-size: var(--tamaño-fuente-titulos);
   color: var(--color-texto);
   text-align: center;
   width: 15%;
@@ -128,50 +129,41 @@ header{
 
 .productos {
   display: grid;
-  
-  /* GRID EXPLÍCITA: Definimos columnas específicas */
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  
-  /* GRID IMPLÍCITA: Filas que se crean automáticamente */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-auto-rows: minmax(350px, auto);
-  
-  /* FLUJO DENSO: Optimiza espacios vacíos */
   grid-auto-flow: dense;
-  
-  gap: 2rem;
-  padding: 3rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 20px;
+  padding: 30px;
 }
 
 .producto__item {
-  background-color: #FFF1E6;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 15px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
 }
 
 .producto__imagen {
   width: 100%;
-  height: auto;
+  height: 300px;
   border-radius: 10px;
   margin-bottom: 15px;
+  object-fit: cover;
 }
 
 .producto__nombre {
   font-family: var(--fuente-titulos);
-  font-size: 20px;
+  font-size: var(--tamaño-fuente-botones);
   color: var(--color-texto);
   margin-bottom: 10px;
 }
 
 .producto__precio {
   font-family: var(--fuente-principal);
-  font-size: 18px;
+  font-size: var(--tamaño-fuente-principal);
   color: var(--color-texto);
   font-weight: var(--peso-fuente-principal);
 }
@@ -181,74 +173,145 @@ header{
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: 
     "contenido contenido imagen";
-  gap: 4rem;
-  padding: 5rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  align-items: center; /* Alineamiento vertical */
+  gap: 10%;
+  padding: 40px;
+  align-items: flex-start;
 }
 
 .nosotros__imagen {
   grid-area: imagen;
   display: flex;
-  justify-content: center; /* Alineamiento horizontal */
-  align-items: center; /* Alineamiento vertical */
+  justify-content: center;
+  align-items: center; 
 }
 
 .nosotros__imagen img {
   width: 100%;
-  height: 500px;
+  height: 400px;
   object-fit: cover;
   border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .nosotros__contenido {
   grid-area: contenido;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Alineamiento vertical */
-  gap: 1.5rem;
+  justify-content: center; 
+  gap: 10px;
 }
 
 .nosotros__titulo {
-  font-size: 2.5rem;
-  color: #8B4513;
-  font-family: 'Georgia', serif;
+  font-size: var(--tamaño-fuente-titulos);
+  color: var(--color-texto);
+  font-family: var(--fuente-titulos);
+  margin: 10px auto;
+  letter-spacing: 0.5px;
 }
 
 .nosotros__descripcion {
-  font-size: 1.1rem;
+  font-size: var(--tamaño-fuente-principal);
   line-height: 1.8;
-  color: #555;
+  color: var(--color-texto);
+  font-family: var(--fuente-principal);
 }
 
-.nosotros__valores {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.valor {
+.nosotros__descripcion--centrado {
   text-align: center;
-  padding: 1rem;
-  background: #FFF5F5;
-  border-radius: 10px;
+  font-weight: bold;
+}
+
+.contacto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 5%;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contacto__seccion{
   display: flex;
   flex-direction: column;
-  align-items: center; /* Alineamiento horizontal */
-  justify-content: center; /* Alineamiento vertical */
+  gap: 10px;
 }
 
-.valor h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  color: #C08552;
+input{
+  padding: 5px;
 }
 
-.valor p {
-  font-size: 0.9rem;
-  color: #666;
+.contacto__texto{
+  font-family: var(--fuente-principal);
+  font-size: 16px;
+  color: var(--color-texto);
+  border: 1px solid rgb(175, 163, 123);
+  border-radius: 5px;
+}
+
+.contacto__texto--select{
+  padding: 5px;
+}
+
+.contacto__texto--mensaje{
+  height: 110px;
+  padding: 5px;
+}
+
+label{
+  font-family: var(--fuente-principal);
+  font-size: var(--tamaño-fuente-principal);
+  color: var(--color-texto);
+}
+.contacto__btn {
+  grid-column: span 2;
+  justify-self: center;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  align-items: center;
+  background-color: #f8b2bd; /* tu color pastel */
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Logo */
+.footer__logo {
+  width: 180px;
+  height: 100px;
+  justify-self: center;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: var(--tamaño-fuente-principal);
+  font-family: var(--fuente-principal);
+}
+
+.footer__link {
+  color: var(--color-texto);
+  text-decoration: none;
+}
+
+/* Redes sociales */
+.footer__redes {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer__red {
+  width: 40px;
+  height: 40px;
+}
+.footer__redes i {
+  font-size: 30px;
+  color: var(--color-texto);
 }
 
